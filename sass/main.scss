@@ -2,6 +2,22 @@
 // at least one media query
 // at least once css flexbox
 
+//variables
+
+$grid-width: 114rem;
+$gutter-horizontal: 6rem; 
+
+
+//mixins
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,24 +29,36 @@ html {
 }
 
 body {
-    font-size: inherit;
+    font-size: 1.2rem;
 }
 
+
 #header {
-    height: 6rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5rem;
     background-color: orange;
-    #header-img {
-        display: block;
-        height: 4rem;
+    height: 6rem;
+
+    .row {
+        max-width: $grid-width;
+        background: #eee;
+        margin: 0 auto;
     }
-    #nav-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+
+    @include clearfix;
+
+    [class^="col-"] {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
     }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+}
+
+
+#header {
 }
