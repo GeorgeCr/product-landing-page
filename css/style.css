@@ -15,14 +15,15 @@ body {
   #header .row {
     max-width: 114rem;
     background: #eee;
-    margin: 0 auto; }
-  #header::after {
-    content: "";
-    display: table;
-    clear: both; }
-  #header [class^="col-"] {
-    float: left; }
-    #header [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-  #header .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
+    margin: 0 auto;
+    height: 100%; }
+    #header .row::after {
+      content: "";
+      display: table;
+      clear: both; }
+    #header .row [class^="col-"] {
+      float: left; }
+      #header .row [class^="col-"]:not(:last-child) {
+        margin-right: 6rem; }
+    #header .row .col-1-of-2 {
+      width: calc((100% - 6rem) / 2); }
