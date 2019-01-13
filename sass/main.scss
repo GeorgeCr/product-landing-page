@@ -1,0 +1,36 @@
+// navbar always at the top of the viewport
+// at least one media query
+// at least once css flexbox
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: inherit;
+}
+
+#header {
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: orange;
+    #header-img {
+        display: block;
+        height: 4rem;
+    }
+    #nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
