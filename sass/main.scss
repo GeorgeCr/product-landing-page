@@ -4,17 +4,22 @@
 
 // length variables
 
+@import "animations.scss";
+
 $grid-width: 114rem;
 $gutter-horizontal: 6rem; 
 
 
 // colors
 
-$color-navigation-primary: #ffe98a;
-$color-navigation-secondary: #e61c5d;
+$color-navigation-primary: #222831;
+$color-navigation-secondary: #00adb5;
 $color-navigation-text: #000;
+$color-main-section: #eeeeee;
 
+// tipography
 
+$main-border: .3rem solid $color-navigation-text;
 
 // mixins
 
@@ -26,7 +31,7 @@ $color-navigation-text: #000;
     }
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -53,6 +58,7 @@ body {
         height: 100%;
         display: flex;
         align-items: center;
+        border: $main-border;
 
         @include clearfix;
 
@@ -68,7 +74,7 @@ body {
             #header-img {
                 display: inline-block;
                 padding-left: 10px;
-                height: 40px;
+                height: 4rem;
             }
 
             a {
@@ -84,3 +90,52 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.main-focus {
+    height: 80vh;
+}
+
+.container {
+    max-width: $grid-width;
+    margin: 0 auto;
+    border-left: $main-border;
+    border-right: $main-border;
+    border-bottom: $main-border;
+    background-color: $color-main-section;
+
+    .heading {
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+
+    .heading-primary {
+        margin-top: 5rem;
+        animation: moveInLeft 1s ease-out;
+    }
+
+    .heading-primary::after {
+        content: '';
+        display: block;
+        height: .4rem;
+        width: 7.2rem;
+        margin: 2rem auto;
+        background-color: $color-navigation-text;
+    }
+    
+    .heading-secondary {
+        font-size: 3.6rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+#header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.img {
+    
+}
+
+
