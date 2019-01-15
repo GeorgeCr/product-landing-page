@@ -87,8 +87,8 @@ body {
 }
 
 #nav-bar {
-    display: flex;
-    justify-content: center;
+    float: right;
+    padding-right: 1rem;
 }
 
 .main-focus {
