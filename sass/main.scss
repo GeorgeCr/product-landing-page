@@ -2,12 +2,13 @@
 // at least one media query
 // at least once css flexbox
 
-// length variables
-
 @import "animations.scss";
 
+// length variables
+
 $grid-width: 114rem;
-$gutter-horizontal: 6rem; 
+$gutter-horizontal: 6rem;
+$main-focus-padding: 5rem 2rem;
 
 
 // colors
@@ -48,6 +49,9 @@ body {
 
 
 #header {
+    top: 0;
+    width: 100%;
+    position: fixed;
     background-color: $color-navigation-primary;
     height: 6rem;
     color: $color-navigation-text;
@@ -73,7 +77,7 @@ body {
             width: calc((100% - #{$gutter-horizontal}) / 2);
             #header-img {
                 display: inline-block;
-                padding-left: 10px;
+                padding-left: 1rem;
                 height: 4rem;
             }
 
@@ -91,10 +95,6 @@ body {
     padding-right: 1rem;
 }
 
-.main-focus {
-    height: 80vh;
-}
-
 .container {
     max-width: $grid-width;
     margin: 0 auto;
@@ -104,7 +104,7 @@ body {
     background-color: $color-main-section;
 
     .heading {
-        padding: 5rem 2rem;
+        padding: $main-focus-padding;
         text-align: center;
     }
 
@@ -128,14 +128,28 @@ body {
     }
 }
 
-#header {
-    top: 0;
-    width: 100%;
-    position: fixed;
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $main-focus-padding;
+
+    .feature {
+        .fas {
+            font-size: 3rem;
+            color: $color-navigation-secondary;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 5rem;
+        }
+
+        .feature-header {
+            padding-top: 1rem;
+        }
+    }
 }
 
-.img {
-    
-}
+
 
 
