@@ -75,77 +75,79 @@ body {
 
         .col-1-of-2 {
             width: calc((100% - #{$gutter-horizontal}) / 2);
+
             #header-img {
                 display: inline-block;
                 padding-left: 1rem;
                 height: 4rem;
             }
 
-            a {
+            .nav-link {
                 color: $color-navigation-text;
                 text-decoration: none;
                 font-weight: 700;
             }
+
+            #nav-bar {
+                float: right;
+                padding-right: 1rem;
+            }
         }
     }
 }
-
-#nav-bar {
-    float: right;
-    padding-right: 1rem;
-}
-
-.container {
-    max-width: $grid-width;
-    margin: 0 auto;
-    border-left: $main-border;
-    border-right: $main-border;
-    border-bottom: $main-border;
-    background-color: $color-main-section;
-
-    .heading {
-        padding: $main-focus-padding;
-        text-align: center;
-    }
-
-    .heading-primary {
-        margin-top: 5rem;
-        animation: moveInLeft 1s ease-out;
-    }
-
-    .heading-primary::after {
-        content: '';
-        display: block;
-        height: .4rem;
-        width: 7.2rem;
-        margin: 2rem auto;
-        background-color: $color-navigation-text;
-    }
+.main-focus {
+    .container {
+        max-width: $grid-width;
+        margin: 0 auto;
+        border-left: $main-border;
+        border-right: $main-border;
+        border-bottom: $main-border;
+        background-color: $color-main-section;
     
-    .heading-secondary {
-        font-size: 3.6rem;
-        animation: moveInRight 1s ease-out;
-    }
-}
-
-.features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: $main-focus-padding;
-
-    .feature {
-        .fas {
-            font-size: 3rem;
-            color: $color-navigation-secondary;
+        .heading {
+            padding: $main-focus-padding;
+            text-align: center;
+        }
+    
+        .heading-primary {
+            margin-top: 5rem;
+            animation: moveInLeft 1s ease-out;
+        }
+    
+        .heading-primary::after {
+            content: '';
+            display: block;
+            height: .4rem;
+            width: 7.2rem;
+            margin: 2rem auto;
+            background-color: $color-navigation-text;
+        }
+        
+        .heading-secondary {
+            font-size: 3.6rem;
+            animation: moveInRight 1s ease-out;
         }
 
-        &:not(:last-child) {
-            padding-bottom: 5rem;
-        }
-
-        .feature-header {
-            padding-top: 1rem;
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: $main-focus-padding;
+        
+            .feature {
+                .fas {
+                    font-size: 3rem;
+                    color: $color-navigation-secondary;
+                }
+        
+                &:not(:last-child) {
+                    padding-bottom: 5rem;
+                }
+        
+                .feature-header {
+                    padding-top: 1rem;
+                }
+            }
         }
     }
 }
