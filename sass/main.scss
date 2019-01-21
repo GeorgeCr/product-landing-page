@@ -1,6 +1,6 @@
-// navbar always at the top of the viewport
+// navbar always at the top of the viewport done
 // at least one media query
-// at least once css flexbox
+// at least once css flexbox done
 
 @import "animations.scss";
 
@@ -9,18 +9,21 @@
 $grid-width: 114rem;
 $gutter-horizontal: 6rem;
 $main-focus-padding: 5rem 2rem;
+$common-padding: 2rem 4rem;
 
 
 // colors
 
 $color-navigation-primary: #222831;
 $color-navigation-secondary: #00adb5;
+$color-pricing-primary: #393e46;
 $color-navigation-text: #000;
-$color-main-section: #eeeeee;
+$color-main-section: #eee;
 
 // tipography
 
 $main-border: .3rem solid $color-navigation-text;
+$main-font-size: 1.6rem;
 
 // mixins
 
@@ -43,7 +46,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: $main-font-size;
     font-family: Lato, sans-serif;
 }
 
@@ -95,13 +98,10 @@ body {
         }
     }
 }
-.main-focus {
+#main-focus {
     .container {
         max-width: $grid-width;
         margin: 0 auto;
-        border-left: $main-border;
-        border-right: $main-border;
-        border-bottom: $main-border;
         background-color: $color-main-section;
     
         .heading {
@@ -152,6 +152,63 @@ body {
     }
 }
 
+#pricing {
+    .row {
+        width: $grid-width;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: $common-padding;
+        background-color: $color-main-section;
+
+        .card {
+            border: $main-border;
+            display: inline-block;
+            text-align: center;
+            padding: 6rem 4rem;
+            margin-bottom: 4rem;
+
+            &-header {
+                margin-top: 2rem;
+                padding: $common-padding;
+                font-size: 2.4rem;
+                font-weight: 700;
+            }
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &-paragraph {
+                padding-bottom: 4rem;
+            }
+
+            .card-btn {
+                &:link, &:visited {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    background-color: $color-pricing-primary;
+                    color: $color-main-section;
+                    padding: 1.5rem 4rem;
+                    margin-bottom: 2rem;
+                }
+            } 
+        }
+    }
+}
+
+#how-it-works {
+    width: $grid-width;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $color-main-section;
+
+    .container {
+        h2 {
+            padding: $common-padding;
+        }
+    }
+}
 
 
 
