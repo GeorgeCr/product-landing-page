@@ -68,38 +68,73 @@ body {
         float: right;
         padding-right: 1rem; }
 
-.main-focus .container {
+#main-focus .container {
   max-width: 114rem;
   margin: 0 auto;
-  border-left: 0.3rem solid #000;
-  border-right: 0.3rem solid #000;
-  border-bottom: 0.3rem solid #000;
-  background-color: #eeeeee; }
-  .main-focus .container .heading {
+  background-color: #eee; }
+  #main-focus .container .heading {
     padding: 5rem 2rem;
     text-align: center; }
-  .main-focus .container .heading-primary {
+  #main-focus .container .heading-primary {
     margin-top: 5rem;
     animation: moveInLeft 1s ease-out; }
-  .main-focus .container .heading-primary::after {
+  #main-focus .container .heading-primary::after {
     content: '';
     display: block;
     height: .4rem;
     width: 7.2rem;
     margin: 2rem auto;
     background-color: #000; }
-  .main-focus .container .heading-secondary {
+  #main-focus .container .heading-secondary {
     font-size: 3.6rem;
     animation: moveInRight 1s ease-out; }
-  .main-focus .container .features {
+  #main-focus .container .features {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5rem 2rem; }
-    .main-focus .container .features .feature .fas {
+    #main-focus .container .features .feature .fas {
       font-size: 3rem;
       color: #00adb5; }
-    .main-focus .container .features .feature:not(:last-child) {
+    #main-focus .container .features .feature:not(:last-child) {
       padding-bottom: 5rem; }
-    .main-focus .container .features .feature .feature-header {
+    #main-focus .container .features .feature .feature-header {
       padding-top: 1rem; }
+
+#pricing .row {
+  width: 114rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  background-color: #eee; }
+  #pricing .row .card {
+    border: 0.3rem solid #000;
+    display: inline-block;
+    text-align: center;
+    padding: 6rem 4rem;
+    margin-bottom: 4rem; }
+    #pricing .row .card-header {
+      margin-top: 2rem;
+      padding: 2rem 4rem;
+      font-size: 2.4rem;
+      font-weight: 700; }
+    #pricing .row .card:not(:last-child) {
+      margin-right: 2rem; }
+    #pricing .row .card-paragraph {
+      padding-bottom: 4rem; }
+    #pricing .row .card .card-btn:link, #pricing .row .card .card-btn:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #393e46;
+      color: #eee;
+      padding: 1.5rem 4rem;
+      margin-bottom: 2rem; }
+
+#how-it-works {
+  width: 114rem;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eee; }
+  #how-it-works .container h2 {
+    padding: 2rem 4rem; }
