@@ -138,3 +138,14 @@ body {
   background-color: #eee; }
   #how-it-works .container h2 {
     padding: 2rem 4rem; }
+
+#video {
+  border: 0;
+  padding-bottom: 2rem; }
+
+#form {
+  background-color: #eee; }
+  #form .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; }
