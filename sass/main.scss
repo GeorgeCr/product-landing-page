@@ -36,6 +36,14 @@ $main-font-size: 1.6rem;
     }
 }
 
+@mixin content-center {
+   & {
+       width: $grid-width;
+       margin: 0 auto;
+       text-align: center;
+   } 
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -200,10 +208,9 @@ body {
 }
 
 #how-it-works {
-    width: $grid-width;
-    margin: 0 auto;
-    text-align: center;
     background-color: $color-sections;
+
+    @include content-center;
 
     .container {
         h2 {
@@ -217,11 +224,29 @@ body {
     padding-bottom: 2rem;
 }
 
-#form {
-    background-color: $color-sections;
+#form-section {
+    
+    @include content-center;
+
     .container {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
+        background-color: $color-sections;
+        padding-bottom: 10rem;
+    }
+
+    #submit {
+        height: 3rem;
+        width: 100%;
+        max-width: 15rem;
+        padding: 0 2rem;
+        margin-left: 2rem;
+        background-color: $color-navigation-secondary;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        border-radius: 2px;
+
+        border: $main-border;
+        cursor: pointer;
     }
 }
