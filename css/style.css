@@ -132,10 +132,11 @@ body {
       margin-bottom: 2rem; }
 
 #how-it-works {
-  width: 114rem;
-  margin: 0 auto;
-  text-align: center;
   background-color: #eee; }
+  #how-it-works {
+    width: 114rem;
+    margin: 0 auto;
+    text-align: center; }
   #how-it-works .container h2 {
     padding: 2rem 4rem; }
 
@@ -143,9 +144,26 @@ body {
   border: 0;
   padding-bottom: 2rem; }
 
-#form {
-  background-color: #eee; }
-  #form .container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; }
+#form-section {
+  width: 114rem;
+  margin: 0 auto;
+  text-align: center; }
+
+#form-section .container {
+  background-color: #eee;
+  padding-bottom: 10rem; }
+
+#form-section #submit {
+  height: 3rem;
+  width: 100%;
+  max-width: 15rem;
+  padding: 0 2rem;
+  margin-left: 2rem;
+  background-color: #00adb5;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  border-radius: 2px;
+  border: 0.3rem solid #000;
+  cursor: pointer; }
