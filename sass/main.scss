@@ -2,7 +2,8 @@
 // at least one media query
 // at least once css flexbox done
 
-@import "animations.scss";
+@import "animations";
+@import "breakpoints";
 
 // length variables
 
@@ -18,7 +19,7 @@ $color-navigation-primary: #222831;
 $color-navigation-secondary: #00adb5;
 $color-pricing-primary: #393e46;
 $color-navigation-text: #000;
-$color-main-section: #eee;
+$color-sections: #eee;
 
 // tipography
 
@@ -102,7 +103,7 @@ body {
     .container {
         max-width: $grid-width;
         margin: 0 auto;
-        background-color: $color-main-section;
+        background-color: $color-sections;
     
         .heading {
             padding: $main-focus-padding;
@@ -153,13 +154,14 @@ body {
 }
 
 #pricing {
+
     .row {
         width: $grid-width;
         display: flex;
         justify-content: center;
         margin: 0 auto;
         padding: $common-padding;
-        background-color: $color-main-section;
+        background-color: $color-sections;
 
         .card {
             border: $main-border;
@@ -188,7 +190,7 @@ body {
                     text-decoration: none;
                     text-transform: uppercase;
                     background-color: $color-pricing-primary;
-                    color: $color-main-section;
+                    color: $color-sections;
                     padding: 1.5rem 4rem;
                     margin-bottom: 2rem;
                 }
@@ -201,7 +203,7 @@ body {
     width: $grid-width;
     margin: 0 auto;
     text-align: center;
-    background-color: $color-main-section;
+    background-color: $color-sections;
 
     .container {
         h2 {
@@ -210,5 +212,16 @@ body {
     }
 }
 
+#video {
+    border: 0;
+    padding-bottom: 2rem;
+}
 
-
+#form {
+    background-color: $color-sections;
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+}
